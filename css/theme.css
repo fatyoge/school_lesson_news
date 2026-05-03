@@ -161,6 +161,13 @@
   text-align: center;
   color: var(--fg-muted);
 }
+.slide-reveal .source {
+  font-size: 0.42em;
+  color: var(--fg-muted);
+  margin-top: 1em;
+  padding-top: 0.6em;
+  border-top: 1px dashed var(--border-subtle);
+}
 
 /* ==========================================================================
    对比锚页（中美数据并排）

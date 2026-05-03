@@ -51,10 +51,15 @@ export function buildUSDataSlideHTML(story) {
   const us = story.us_data || {};
   const items = us.bullets || us.facts || [];
   const headline = us.headline || us.source || '';
+  const source = us.source && us.source !== headline ? us.source : '';
+  const sourceEl = source
+    ? `<p class="source">来源：${escapeHTML(source)}</p>`
+    : '';
   return `
     <section class="slide-reveal">
       <h3 class="us-headline">${escapeHTML(headline)}</h3>
       ${bulletsHTML(items)}
+      ${sourceEl}
     </section>
   `.trim();
 }

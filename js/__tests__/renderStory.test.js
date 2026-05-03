@@ -61,6 +61,16 @@ test('buildUSDataSlideHTML: renders headline and all bullets', () => {
   assert.ok(html.includes('眼睁睁看房子和宠物烧毁'));
 });
 
+test('buildUSDataSlideHTML: renders source citation when different from headline', () => {
+  const withSource = {
+    ...story,
+    us_data: { ...story.us_data, source: 'NBC News 2010', source_url: 'https://example.com' }
+  };
+  const html = buildUSDataSlideHTML(withSource);
+  assert.ok(html.includes('NBC News 2010'));
+  assert.ok(html.includes('class="source"'));
+});
+
 test('buildComparisonSlideHTML: renders both US and CN sides', () => {
   const html = buildComparisonSlideHTML(story);
   assert.ok(html.includes('美国部分小镇'));
