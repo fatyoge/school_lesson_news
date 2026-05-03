@@ -3,16 +3,21 @@
  */
 import { loadStories } from './storyData.js';
 import { renderCatalog } from './renderCatalog.js';
+import { renderAllStories } from './renderStory.js';
 
 async function bootstrap() {
   const stories = await loadStories('./data/stories.json');
 
   const catalogContainer = document.querySelector('#catalog-grid');
-  if (!catalogContainer) {
-    throw new Error('catalog container #catalog-grid not found');
+  const slidesContainer = document.querySelector('.reveal .slides');
+  if (!catalogContainer || !slidesContainer) {
+    throw new Error('required containers not found');
   }
 
-  // 初始化 reveal.js
+  // 1. 先把 story sections 注入 DOM（必须在 reveal.initialize 之前）
+  renderAllStories(stories, slidesContainer);
+
+  // 2. 初始化 reveal.js
   const reveal = new Reveal({
     hash: false,
     slideNumber: false,
@@ -22,9 +27,15 @@ async function bootstrap() {
   });
   await reveal.initialize();
 
+  // 3. 渲染目录卡片（依赖 reveal 实例做点击跳转）
   renderCatalog(stories, catalogContainer, reveal);
 
-  // 暴露给后续 keyboard 模块
+  // 4. "回目录" 按钮事件
+  slidesContainer.addEventListener('click', (event) => {
+    const btn = event.target.closest('[data-action="back-to-catalog"]');
+    if (btn) reveal.slide(1, 0);
+  });
+
   window.__lessonApp = { stories, reveal };
 }
 
