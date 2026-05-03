@@ -1,0 +1,298 @@
+/* ==========================================================================
+   家长进课堂 · 新闻报道风主题
+   覆盖 reveal.js 默认 black.css 的字体/颜色/版式
+   ========================================================================== */
+
+:root {
+  --bg-deep: #0a0a0a;
+  --bg-block: #1a1a1a;
+  --bg-block-2: #222;
+  --fg-white: #ffffff;
+  --fg-muted: #cfcfcf;
+  --accent-red: #e63946;
+  --accent-cn: #5fb878;
+  --border-subtle: rgba(255, 255, 255, 0.12);
+  --font-zh: "PingFang SC", "思源黑体", "Microsoft YaHei", "Hiragino Sans GB", sans-serif;
+  --font-mono: "JetBrains Mono", "Roboto Mono", Consolas, monospace;
+}
+
+/* ==========================================================================
+   reveal.js 全局覆盖
+   ========================================================================== */
+.reveal {
+  background: var(--bg-deep);
+  color: var(--fg-white);
+  font-family: var(--font-zh);
+  font-size: 38px;
+  line-height: 1.45;
+}
+.reveal .slides section {
+  text-align: left;
+  padding: 0 6vw;
+}
+.reveal h1, .reveal h2, .reveal h3 {
+  color: var(--fg-white);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.6em;
+  text-transform: none;
+}
+.reveal h1 { font-size: 2.0em; }
+.reveal h2 { font-size: 1.5em; }
+.reveal h3 { font-size: 1.2em; }
+.reveal p { margin: 0.5em 0; }
+.reveal a { color: var(--accent-red); text-decoration: none; }
+
+/* ==========================================================================
+   封面页（首页 + 故事封面页通用）
+   ========================================================================== */
+.slide-cover-main {
+  text-align: center;
+}
+.slide-cover-main h1 {
+  font-size: 2.6em;
+  margin-bottom: 0.3em;
+}
+.slide-cover-main .subtitle {
+  font-size: 1.1em;
+  color: var(--fg-muted);
+}
+
+.story-cover {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+}
+.story-cover .story-title {
+  font-size: 2.2em;
+  margin: 0 0 0.5em;
+  color: var(--fg-white);
+}
+.story-cover .cover-image {
+  max-width: 70%;
+  max-height: 55vh;
+  margin: 0.5em 0;
+  border-radius: 4px;
+}
+.story-cover .hook-question {
+  font-size: 1.1em;
+  color: var(--accent-red);
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   目录页
+   ========================================================================== */
+.catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  width: 100%;
+  padding: 0 4vw;
+}
+.catalog-card {
+  background: var(--bg-block);
+  border: 1px solid var(--border-subtle);
+  border-radius: 6px;
+  padding: 18px;
+  cursor: pointer;
+  transition: transform 0.15s ease, border-color 0.15s ease;
+  text-align: left;
+}
+.catalog-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent-red);
+}
+.catalog-card .card-num {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  color: var(--accent-red);
+  margin-bottom: 8px;
+}
+.catalog-card .card-thumb {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: var(--bg-block-2) center/cover no-repeat;
+  margin-bottom: 12px;
+  border-radius: 3px;
+}
+.catalog-card .card-title {
+  font-size: 0.78em;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--fg-white);
+}
+.catalog-card .card-meta {
+  font-size: 0.55em;
+  color: var(--fg-muted);
+  display: flex;
+  gap: 12px;
+}
+
+/* ==========================================================================
+   故事铺垫页 / 反差揭示页
+   ========================================================================== */
+.slide-narrative img,
+.slide-reveal img {
+  max-width: 60%;
+  max-height: 50vh;
+  display: block;
+  margin: 1em auto;
+  border-radius: 4px;
+}
+.slide-reveal .big-number {
+  font-family: var(--font-mono);
+  font-size: 4em;
+  color: var(--accent-red);
+  font-weight: 800;
+  text-align: center;
+  margin: 0.3em 0;
+}
+.slide-reveal .reveal-caption {
+  font-size: 1em;
+  text-align: center;
+  color: var(--fg-muted);
+}
+
+/* ==========================================================================
+   对比锚页（中美数据并排）
+   ========================================================================== */
+.comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  height: 70vh;
+  align-items: stretch;
+}
+.comparison-side {
+  padding: 28px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+}
+.comparison-side.us {
+  background: rgba(230, 57, 70, 0.10);
+  border: 2px solid var(--accent-red);
+}
+.comparison-side.cn {
+  background: rgba(95, 184, 120, 0.08);
+  border: 2px solid var(--accent-cn);
+}
+.comparison-side h2 {
+  font-size: 1.4em;
+  margin: 0 0 0.6em;
+}
+.comparison-side.us h2 { color: var(--accent-red); }
+.comparison-side.cn h2 { color: var(--accent-cn); }
+.comparison-side .facts {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 auto;
+  font-size: 0.92em;
+  line-height: 1.6;
+}
+.comparison-side .facts li {
+  margin-bottom: 0.5em;
+  padding-left: 1em;
+  position: relative;
+}
+.comparison-side .facts li::before {
+  content: "·";
+  position: absolute;
+  left: 0;
+  color: inherit;
+  opacity: 0.6;
+}
+.comparison-side .source {
+  font-size: 0.42em;
+  color: var(--fg-muted);
+  margin-top: 1em;
+  padding-top: 0.6em;
+  border-top: 1px dashed var(--border-subtle);
+}
+
+/* ==========================================================================
+   想一想页
+   ========================================================================== */
+.slide-think {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+.slide-think .think-label {
+  font-size: 0.7em;
+  color: var(--accent-red);
+  letter-spacing: 0.3em;
+  margin-bottom: 0.5em;
+}
+.slide-think .think-question {
+  font-size: 1.6em;
+  font-weight: 700;
+  margin-bottom: 1em;
+}
+.slide-think .think-options {
+  list-style: none;
+  padding: 0;
+  font-size: 0.95em;
+}
+.slide-think .think-options li {
+  background: var(--bg-block);
+  margin: 0.4em 0;
+  padding: 12px 20px;
+  border-radius: 4px;
+  border-left: 4px solid var(--accent-red);
+}
+.slide-think .think-timer {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  font-size: 0.55em;
+  color: var(--fg-muted);
+  font-family: var(--font-mono);
+}
+
+/* ==========================================================================
+   背景小知识页 / 收尾
+   ========================================================================== */
+.slide-aftermath {
+  text-align: center;
+}
+.slide-aftermath .aftermath-text {
+  font-size: 1.2em;
+  line-height: 1.6;
+  max-width: 80%;
+  margin: 1em auto;
+}
+.slide-aftermath .ending-quote {
+  font-size: 1.4em;
+  color: var(--accent-cn);
+  font-weight: 600;
+  margin-top: 1em;
+}
+
+/* ==========================================================================
+   "返回目录"按钮（每个故事最后一页角落）
+   ========================================================================== */
+.back-to-catalog {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  font-size: 0.5em;
+  color: var(--fg-muted);
+  background: var(--bg-block);
+  padding: 6px 12px;
+  border-radius: 3px;
+  border: 1px solid var(--border-subtle);
+  cursor: pointer;
+  font-family: var(--font-mono);
+}
+.back-to-catalog:hover { border-color: var(--accent-red); color: var(--fg-white); }
+
+/* ==========================================================================
+   reveal.js progress / controls 微调
+   ========================================================================== */
+.reveal .progress { color: var(--accent-red); }
+.reveal .controls { color: var(--accent-red); }
