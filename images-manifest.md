@@ -30,7 +30,7 @@
 
 | 文件名 | 用途 | 搜索关键词 | 候选来源 |
 |---|---|---|---|
-| `cover.jpg` | 封面:前院菜园 | "front yard vegetable garden" | https://commons.wikimedia.org/（搜 "front yard garden"）；Pexels |
+| `cover.jpg` | 封面：前院菜园 | "front yard vegetable garden" | https://commons.wikimedia.org/（搜 "front yard garden"）；Pexels |
 | `couple.jpg` | 故事铺垫：Ricketts 夫妇 | "Hermine Ricketts Tom Carroll Miami Shores" | Institute for Justice 案件页 https://ij.org/case/miami-shores-vegetable-garden/ |
 | `news.png` | 反差揭示：罚款单或新闻截图 | "Miami Shores garden ban news" | IJ 网站；地方报道截图 |
 | `balcony-china.jpg` | 对比锚：中国阳台菜园 | "中国 阳台 种菜" | 微博 / 小红书图（截图引用）；或 Pexels "balcony garden Asia" |
