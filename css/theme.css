@@ -217,6 +217,7 @@
    想一想页
    ========================================================================== */
 .slide-think {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
