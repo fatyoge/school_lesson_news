@@ -26,6 +26,9 @@
   font-size: 38px;
   line-height: 1.45;
 }
+.reveal .slides {
+  transform-style: flat !important;
+}
 .reveal .slides section {
   text-align: left;
   padding: 0 6vw;
