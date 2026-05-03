@@ -30,6 +30,8 @@
   transform-style: flat !important;
 }
 .reveal .slides section {
+  transform: none !important;
+  transform-style: flat !important;
   text-align: left;
   padding: 0 6vw;
 }
