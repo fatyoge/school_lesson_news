@@ -10,7 +10,7 @@
  */
 export function keyToTarget(key, storyCount) {
   if (typeof key !== 'string' || key.length !== 1) return null;
-  if (typeof storyCount !== 'number' || storyCount <= 0) return null;
+  if (typeof storyCount !== 'number' || !Number.isFinite(storyCount) || storyCount <= 0) return null;
   if (!/^[0-9]$/.test(key)) return null;
 
   const digit = Number(key);
@@ -29,6 +29,7 @@ export function setupKeyboardShortcuts(stories, reveal) {
     // 在输入框里不触发
     const tag = (event.target && event.target.tagName) || '';
     if (tag === 'INPUT' || tag === 'TEXTAREA') return;
+    if (event.target && event.target.isContentEditable) return;
     if (event.metaKey || event.ctrlKey || event.altKey) return;
 
     const target = keyToTarget(event.key, stories.length);
