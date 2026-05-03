@@ -1,0 +1,43 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git init *)",
+      "Bash(git config *)",
+      "Bash(npm test *)",
+      "Bash(echo \"EXIT_CODE=$?\")",
+      "Bash(node --test \"js/__tests__/*.test.js\")",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(echo \"EXIT: $?\")",
+      "Bash(node --test js/__tests__)",
+      "Bash(curl -sL https://api.github.com/repos/hakimel/reveal.js/releases/latest)",
+      "Bash(curl -sL \"https://api.github.com/repos/hakimel/reveal.js/releases?per_page=30\")",
+      "Bash(npm pack *)",
+      "Read(//d/d/claude/school_lesson_news/**)",
+      "Bash(tar -tzf reveal.js-5.2.1.tgz)",
+      "Bash(tar -xzf reveal.js-5.2.1.tgz)",
+      "Bash(mv package *)",
+      "Bash(rm reveal.js-5.2.1.tgz)",
+      "Bash(node --input-type=module -e \"import { readFileSync } from 'fs'; import { validateStories } from './js/storyData.js'; const data = JSON.parse\\(readFileSync\\('data/stories.json', 'utf-8'\\)\\); const r = validateStories\\(data.stories\\); console.log\\(r.ok ? 'OK \\('+data.stories.length+' stories\\)' : 'FAIL\\\\n'+r.errors.join\\('\\\\n'\\)\\);\")",
+      "Bash(git -C d:/claude/school_lesson_news log --oneline -10)",
+      "Bash(git -C d:/claude/school_lesson_news add images-manifest.md)",
+      "Bash(git -C d:/claude/school_lesson_news commit -m \"docs: fix colon punctuation in images-manifest.md\")",
+      "Bash(git -C d:/claude/school_lesson_news log --oneline -3)",
+      "Bash(git -C d:/claude/school_lesson_news show --stat f8cd7bf)",
+      "Bash(git -C d:/claude/school_lesson_news log --format=%s -1 f8cd7bf)",
+      "Bash(git -C d:/claude/school_lesson_news add css/theme.css)",
+      "Bash(git -C d:/claude/school_lesson_news commit -m \"fix: add position:relative to .slide-think for timer placement\")",
+      "Bash(git -C d:/claude/school_lesson_news show --stat 00df58b)",
+      "Bash(node --test d:/claude/school_lesson_news/js/__tests__/renderCatalog.test.js)",
+      "Bash(git -C d:/claude/school_lesson_news log --format=%s -1 00df58b)",
+      "Bash(git -C d:/claude/school_lesson_news diff 00df58b^..00df58b --name-only)",
+      "Bash(python -m http.server 8000)",
+      "Bash(curl -s http://localhost:8000/)",
+      "Bash(curl -s http://localhost:8000/data/stories.json)",
+      "Bash(curl -s http://localhost:8000/css/theme.css)",
+      "Bash(curl -s http://localhost:8000/js/app.js)",
+      "Bash(kill %1)",
+      "Bash(git tag *)"
+    ]
+  }
+}
