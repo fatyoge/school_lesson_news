@@ -1,0 +1,10 @@
+{
+  "name": "school-lesson-news",
+  "version": "1.0.0",
+  "description": "家长进课堂'看世界、想问题' HTML 演示",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "test": "node --test \"js/__tests__/*.test.js\""
+  }
+}
