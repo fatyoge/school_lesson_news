@@ -130,6 +130,12 @@
   display: flex;
   gap: 12px;
 }
+.catalog-card .card-hook {
+  font-size: 0.55em;
+  color: var(--fg-muted);
+  margin: 0 0 8px;
+  line-height: 1.4;
+}
 
 /* ==========================================================================
    故事铺垫页 / 反差揭示页

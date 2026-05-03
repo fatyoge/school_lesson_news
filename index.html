@@ -10,13 +10,25 @@
 <body>
   <div class="reveal">
     <div class="slides">
-      <section><h1>测试 Slide 1</h1><p>如果你看到这一页，reveal.js 加载成功</p></section>
-      <section><h1>测试 Slide 2</h1><p>按 → 翻到这一页就更成功了</p></section>
+      <!-- 封面 -->
+      <section class="slide-cover-main">
+        <h1>看世界 · 想问题</h1>
+        <p class="subtitle">家长进课堂 · 第 N 期</p>
+        <p class="hint">按 → 进入目录；目录中点击或按数字键 1-9 选讲。</p>
+      </section>
+
+      <!-- 目录 -->
+      <section data-state="catalog">
+        <h2 class="catalog-title">今日故事池</h2>
+        <div id="catalog-grid" class="catalog-grid">
+          <!-- 由 renderCatalog 注入 -->
+        </div>
+      </section>
+
+      <!-- 故事 sections 由 Task 7 注入 -->
     </div>
   </div>
   <script src="vendor/reveal.js/dist/reveal.js"></script>
-  <script>
-    Reveal.initialize({ hash: false, controls: true, progress: true });
-  </script>
+  <script type="module" src="js/app.js"></script>
 </body>
 </html>
