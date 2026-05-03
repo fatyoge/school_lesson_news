@@ -1,0 +1,303 @@
+{
+  "version": 1,
+  "last_updated": "2026-05-02",
+  "stories": [
+    {
+      "id": "01-cahsr",
+      "title": "加州高铁修了 16 年还没通",
+      "theme": "基建",
+      "risk_level": "low",
+      "estimated_duration_min": [3, 5],
+      "hook": "你出生那年开始修，等你大学毕业还没通",
+      "us_data": {
+        "facts": ["2008 立项，原计划 2020 通车", "原预算 $33B", "2024 全段预算飙至 $128B+", "中央山谷段 2030+ 才可能通"],
+        "source": "CHSRA 2024 Project Update Report",
+        "source_url": "https://hsr.ca.gov/about/board-of-directors/board-meeting-archive/",
+        "last_verified": "2026-05-02"
+      },
+      "cn_data": {
+        "facts": ["京沪高铁全长 1318 km（约 819 英里）", "2008.4 开工，2011.6 通车", "工期 39 个月"],
+        "source": "国家铁路局《2024 年统计公报》",
+        "source_url": "https://www.nra.gov.cn/",
+        "last_verified": "2026-05-02"
+      },
+      "comparison_anchor": "16 年没修通 vs 39 个月通车 / $128B 飙升 vs $33B 起步",
+      "interactions": [
+        {"type": "vote", "question": "如果给你 16 年，你能做什么？", "options": ["A. 学会一门外语", "B. 长成大人", "C. 读完小学到大学"]},
+        {"type": "open", "question": "为什么修一条高铁要 16 年还没修完？"}
+      ],
+      "ending": "现在加州高铁还在修，会修通的——只是要等很久",
+      "filter_notes": ["不要使用'中国速度比美国快'等评价语"],
+      "images": [
+        {"file": "01-cahsr/cover.jpg", "purpose": "封面主图：加州高铁未完工高架桥"},
+        {"file": "01-cahsr/route-map.jpg", "purpose": "故事铺垫：原规划路线图"},
+        {"file": "01-cahsr/budget-chart.png", "purpose": "反差揭示：预算膨胀曲线"},
+        {"file": "01-cahsr/jinghu-hsr.jpg", "purpose": "对比锚：京沪高铁运行图"}
+      ]
+    },
+    {
+      "id": "02-fire-fee",
+      "title": "消防员看着房子烧",
+      "theme": "公共服务",
+      "risk_level": "medium",
+      "estimated_duration_min": [3, 5],
+      "hook": "忘交了 75 美元，消防员不肯施救",
+      "us_data": {
+        "facts": ["2010.9.29 田纳西州 Obion County", "Cranick 一家未交 $75/年消防费（订阅制）", "房子起火，消防员到达后只保护邻居家", "老人当场补交也被拒"],
+        "source": "NBC News, MSNBC 2010 报道",
+        "source_url": "https://www.nbcnews.com/id/wbna39516346",
+        "last_verified": "2026-05-02"
+      },
+      "cn_data": {
+        "facts": ["拨打 119 永远免费", "不问交没交税", "消防是国家公共服务"],
+        "source": "《中华人民共和国消防法》",
+        "source_url": "http://www.gov.cn/banshi/2005-08/21/content_25060.htm",
+        "last_verified": "2026-05-02"
+      },
+      "comparison_anchor": "美国某地 $75/年订阅 vs 中国 119 全免费",
+      "interactions": [
+        {"type": "vote", "question": "消防员该不该救？", "options": ["A. 该救", "B. 不该救", "C. 一半一半"]},
+        {"type": "open", "question": "如果消防员去救了，对其他交了费的人公平吗？"}
+      ],
+      "ending": "这件事推动了美国对'订阅式消防'的反思讨论",
+      "filter_notes": ["不渲染宠物死亡细节，仅说'几只宠物没能逃出来'", "不展示火场死亡照片"],
+      "images": [
+        {"file": "02-fire-fee/cover.jpg", "purpose": "封面：燃烧的房屋远景"},
+        {"file": "02-fire-fee/firefighter-watching.jpg", "purpose": "故事铺垫：消防员站在邻居家旁观（如有）"},
+        {"file": "02-fire-fee/news-headline.png", "purpose": "反差揭示：当年新闻头条截图"},
+        {"file": "02-fire-fee/china-119.jpg", "purpose": "对比锚：中国消防员救援图"}
+      ]
+    },
+    {
+      "id": "03-front-yard-garden",
+      "title": "在自家前院种菜被罚款",
+      "theme": "生存",
+      "risk_level": "low",
+      "estimated_duration_min": [3, 5],
+      "hook": "种棵青菜要打 6 年官司",
+      "us_data": {
+        "facts": ["佛罗里达州 Miami Shores 村", "Hermine Ricketts 与 Tom Carroll 夫妇", "2013 起前院种菜被罚 $50/天", "2019 年州法律 SB 82 才允许"],
+        "source": "Institute for Justice 案件档案",
+        "source_url": "https://ij.org/case/miami-shores-vegetable-garden/",
+        "last_verified": "2026-05-02"
+      },
+      "cn_data": {
+        "facts": ["大爷大妈在阳台、绿化带、楼顶种菜是日常", "无'前院禁止种菜'类法规"],
+        "source": "中国城市生活常识",
+        "source_url": "",
+        "last_verified": "2026-05-02"
+      },
+      "comparison_anchor": "美国某地 $50/天罚款 + 6 年官司 vs 中国阳台随便种",
+      "interactions": [
+        {"type": "vote", "question": "你家阳台/院子有人种过菜吗？", "options": ["A. 种过", "B. 没种过", "C. 想种"]},
+        {"type": "open", "question": "为什么有人觉得'看到别人家种菜不舒服'？"}
+      ],
+      "ending": "现在他们可以合法在前院种菜了——人们打官司能改变法律",
+      "filter_notes": [],
+      "images": [
+        {"file": "03-front-yard-garden/cover.jpg", "purpose": "封面：被强制铲除的前院菜园"},
+        {"file": "03-front-yard-garden/couple.jpg", "purpose": "故事铺垫：Ricketts 夫妇照"},
+        {"file": "03-front-yard-garden/news.png", "purpose": "反差揭示：罚款单或新闻截图"},
+        {"file": "03-front-yard-garden/balcony-china.jpg", "purpose": "对比锚：中国阳台菜园"}
+      ]
+    },
+    {
+      "id": "04-rainwater",
+      "title": "天上的雨水也是政府的",
+      "theme": "生存",
+      "risk_level": "low",
+      "estimated_duration_min": [3, 5],
+      "hook": "在自家院子里接雨水，违法",
+      "us_data": {
+        "facts": ["科罗拉多州长期禁止家庭收集雨水", "2009 年 SB 80 仅允许特定农村住户", "2016 年 HB 16-1005 允许任何家庭使用 2 个 110 加仑桶（最多 220 加仑）"],
+        "source": "Colorado Division of Water Resources",
+        "source_url": "https://dwr.colorado.gov/",
+        "last_verified": "2026-05-02"
+      },
+      "cn_data": {
+        "facts": ["北方农村蓄雨水正常生活", "城市虽不普遍但无'违法'概念"],
+        "source": "中国城乡用水习惯",
+        "source_url": "",
+        "last_verified": "2026-05-02"
+      },
+      "comparison_anchor": "美国某州只能两桶 220 加仑 vs 中国想接多少接多少",
+      "interactions": [
+        {"type": "vote", "question": "下雨天你想用桶接雨水做什么？", "options": ["A. 浇花", "B. 玩水", "C. 没想过"]},
+        {"type": "open", "question": "天上的雨水算谁的？"}
+      ],
+      "ending": "2016 年法律改了，现在可以接一点了",
+      "filter_notes": [],
+      "images": [
+        {"file": "04-rainwater/cover.jpg", "purpose": "封面：雨水落入水桶图"},
+        {"file": "04-rainwater/colorado-law.png", "purpose": "故事铺垫：法律条文摘录或图示"},
+        {"file": "04-rainwater/two-barrels.jpg", "purpose": "反差揭示：两个 110 加仑桶图"},
+        {"file": "04-rainwater/china-rural.jpg", "purpose": "对比锚：中国农村蓄水池或水缸"}
+      ]
+    },
+    {
+      "id": "05-ambulance",
+      "title": "宁可坐 Uber 也不叫救护车",
+      "theme": "医疗",
+      "risk_level": "medium",
+      "estimated_duration_min": [3, 5],
+      "hook": "开 2 英里，账单 3000 美元",
+      "us_data": {
+        "facts": ["2019-2020 美国救护车均价 $940-$1,277（保险前）", "多起报道：扭伤/过敏叫救护车开几英里收 $3000+", "Uber 进入城市后救护车呼叫减少约 7%"],
+        "source": "FAIR Health 2020；University of Kansas 2017 研究；Kaiser Health News 'Bill of the Month'",
+        "source_url": "https://kffhealthnews.org/news/tag/bill-of-the-month/",
+        "last_verified": "2026-05-02"
+      },
+      "cn_data": {
+        "facts": ["120 出车一般几百元起", "医保可报销", "多数地区急救车几百元封顶"],
+        "source": "各地 120 服务收费标准（如《北京市急救服务收费标准》）",
+        "source_url": "",
+        "last_verified": "2026-05-02"
+      },
+      "comparison_anchor": "救护车 $3000+ vs 120 几百元 + 医保报销",
+      "interactions": [
+        {"type": "vote", "question": "如果生病了你会选什么？", "options": ["A. 救护车", "B. 出租车", "C. 自己走"]},
+        {"type": "open", "question": "为什么有人宁可坐 Uber 也不叫救护车？"}
+      ],
+      "ending": "救护车贵让一些人有了疑问：救命的车，要不要这么贵？",
+      "filter_notes": ["不使用'伤员跳车'网络段子（未经核实）", "不展开患者死亡案例"],
+      "images": [
+        {"file": "05-ambulance/cover.jpg", "purpose": "封面：美国救护车 + 账单图"},
+        {"file": "05-ambulance/bill.png", "purpose": "故事铺垫：真实账单截图"},
+        {"file": "05-ambulance/uber-vs-ambulance.jpg", "purpose": "反差揭示：Uber 与救护车并排"},
+        {"file": "05-ambulance/china-120.jpg", "purpose": "对比锚：中国 120 救护车"}
+      ]
+    },
+    {
+      "id": "06-key-bridge",
+      "title": "47 年的桥被一艘船撞塌",
+      "theme": "基建",
+      "risk_level": "medium",
+      "estimated_duration_min": [3, 5],
+      "hook": "1977 年的桥，2024 年塌了",
+      "us_data": {
+        "facts": ["2024.3.26 凌晨", "集装箱船 MV Dali 失去动力撞击桥墩", "桥建于 1977 年", "47 年桥龄"],
+        "source": "NTSB 2024 调查报告",
+        "source_url": "https://www.ntsb.gov/investigations/Pages/HWY24MH010.aspx",
+        "last_verified": "2026-05-02"
+      },
+      "cn_data": {
+        "facts": ["港珠澳大桥 2018 通车", "总长 55 km", "设计抗 16 级台风、8 级地震、30 万吨船撞击", "设计寿命 120 年"],
+        "source": "港珠澳大桥管理局",
+        "source_url": "https://www.hzmb.gov.hk/",
+        "last_verified": "2026-05-02"
+      },
+      "comparison_anchor": "美国 47 年老桥被船撞塌 vs 港珠澳大桥设计抗 30 万吨撞击",
+      "interactions": [
+        {"type": "vote", "question": "你猜美国有多少座桥被评为'结构不安全'？", "options": ["A. 1 千座", "B. 1 万座", "C. 4 万多座"]},
+        {"type": "open", "question": "桥老了应该谁来修？"}
+      ],
+      "ending": "桥要修、要换——没人换，桥就塌",
+      "filter_notes": ["不展示桥塌瞬间死亡画面", "不渲染遇难工人细节，仅一句'有工人不幸遇难'"],
+      "images": [
+        {"file": "06-key-bridge/cover.jpg", "purpose": "封面：Key Bridge 倒塌后远景（避免血腥）"},
+        {"file": "06-key-bridge/bridge-old.jpg", "purpose": "故事铺垫：1977 年桥的历史照片"},
+        {"file": "06-key-bridge/dali-ship.jpg", "purpose": "反差揭示：撞桥的 MV Dali 船"},
+        {"file": "06-key-bridge/hzmb.jpg", "purpose": "对比锚：港珠澳大桥航拍"}
+      ]
+    },
+    {
+      "id": "07-texas-blackout",
+      "title": "停电 4 天，电费 17000 美元",
+      "theme": "基建",
+      "risk_level": "medium",
+      "estimated_duration_min": [3, 5],
+      "hook": "天冷停电没事，账单来了才哭",
+      "us_data": {
+        "facts": ["2021.2.13-17 德州极端寒潮", "电网崩溃，约 450 万户停电、断水多日", "部分用户因可变电价合同收到 $5000-$17,000 极端电费账单"],
+        "source": "ERCOT 报告 2021；Texas State Senate 调查",
+        "source_url": "https://www.ercot.com/files/docs/2021/02/24/2.24.21_FebPRRWeather_Update_Public.pdf",
+        "last_verified": "2026-05-02"
+      },
+      "cn_data": {
+        "facts": ["中国电网应对寒潮恢复速度通常以小时/一两天计", "电价为政府指导价，不会因供需暴涨"],
+        "source": "国家电网公开运维数据",
+        "source_url": "http://www.sgcc.com.cn/",
+        "last_verified": "2026-05-02"
+      },
+      "comparison_anchor": "停电 4 天 + 一户 $17000 账单 vs 中国寒潮停电小时级恢复 + 电价稳定",
+      "interactions": [
+        {"type": "vote", "question": "如果你家停电 4 天，你最担心什么？", "options": ["A. 没法看电视", "B. 冰箱东西坏", "C. 冷"]},
+        {"type": "open", "question": "为什么有人会收到 $17000 的电费？"}
+      ],
+      "ending": "电是日常的水和饭——稳定才安心",
+      "filter_notes": ["不讲死亡数字（246+ 人）", "只讲停电+离谱账单"],
+      "images": [
+        {"file": "07-texas-blackout/cover.jpg", "purpose": "封面：德州雪景 + 黑屋子图"},
+        {"file": "07-texas-blackout/icy-power-line.jpg", "purpose": "故事铺垫：结冰的输电线"},
+        {"file": "07-texas-blackout/bill.png", "purpose": "反差揭示：天价电费账单截图"},
+        {"file": "07-texas-blackout/china-grid.jpg", "purpose": "对比锚：中国电网维修工/雪夜抢修"}
+      ]
+    },
+    {
+      "id": "08-asce-grade",
+      "title": "美国土木协会自己给自己打 C-",
+      "theme": "基建综述",
+      "risk_level": "low",
+      "estimated_duration_min": [3, 4],
+      "hook": "整个国家的基建评级——刚及格",
+      "us_data": {
+        "facts": ["ASCE 每 4 年发布《基础设施报告卡》", "2021 整体评级 C-", "桥梁评级 C，约 4.6 万座（占 7.5%）'结构性不安全'", "之前几次评级长期 D 段"],
+        "source": "ASCE 2021 Infrastructure Report Card",
+        "source_url": "https://infrastructurereportcard.org/",
+        "last_verified": "2026-05-02"
+      },
+      "cn_data": {
+        "facts": ["截至 2023，中国公路桥梁超过 100 万座", "高铁运营里程超 4.5 万公里"],
+        "source": "交通运输部《2023 年交通运输行业发展统计公报》；国家铁路局",
+        "source_url": "https://www.mot.gov.cn/",
+        "last_verified": "2026-05-02"
+      },
+      "comparison_anchor": "美国 4.6 万座桥不安全 vs 中国百万座桥 + 4.5 万公里高铁",
+      "interactions": [
+        {"type": "vote", "question": "听完前面这些故事，你猜美国基建该打几分？", "options": ["A. 优", "B. 良", "C. 差"]},
+        {"type": "open", "question": "为什么会变成这样？"}
+      ],
+      "ending": "每个国家都有自己的问题——重要的是去看见、去想",
+      "filter_notes": ["放在故事池末位作为整堂课收尾"],
+      "images": [
+        {"file": "08-asce-grade/cover.jpg", "purpose": "封面：ASCE 报告卡封面或 'C-' 大字"},
+        {"file": "08-asce-grade/report-card.png", "purpose": "故事铺垫：报告卡分类评分"},
+        {"file": "08-asce-grade/bridge-deficient.jpg", "purpose": "反差揭示：结构不安全的桥（示例）"},
+        {"file": "08-asce-grade/china-infrastructure.jpg", "purpose": "对比锚：中国基建航拍合集"}
+      ]
+    },
+    {
+      "id": "09-shooter-drill",
+      "title": "美国小学生上学要练躲枪手",
+      "theme": "教育",
+      "risk_level": "medium-high",
+      "estimated_duration_min": [3, 5],
+      "hook": "他们练的不是地震、不是火灾",
+      "us_data": {
+        "facts": ["美国 K-12 公立学校 95% 做过 lockdown drill（封锁演练）", "超 40 个州法律要求", "演练内容：关灯静默、躲桌底、堵门、装死、ALICE 流程"],
+        "source": "US GAO 2020 Report; Pew Research 2018; National Center for Education Statistics",
+        "source_url": "https://www.gao.gov/products/gao-20-144",
+        "last_verified": "2026-05-02"
+      },
+      "cn_data": {
+        "facts": ["中国学校演练：地震、火灾、防溺水、紧急疏散", "教育部要求每月 1 次安全教育、每学期 1 次综合演练", "没有'枪手演练'"],
+        "source": "教育部《中小学公共安全教育指导纲要》(2007)",
+        "source_url": "http://www.moe.gov.cn/",
+        "last_verified": "2026-05-02"
+      },
+      "comparison_anchor": "美国孩子练躲枪手 vs 中国孩子练躲地震、火灾",
+      "interactions": [
+        {"type": "vote", "question": "你们学校做过哪些演练？", "options": ["A. 地震", "B. 火灾", "C. 防溺水"]},
+        {"type": "open", "question": "美国孩子为什么要练这个？"}
+      ],
+      "ending": "每个国家的孩子，练的是自己环境里要小心的事",
+      "filter_notes": ["聚焦'练什么'（关灯、躲桌、装死）", "不展开'为什么要练'（不讲具体枪击案、不展示伤亡）", "不出现具体枪击事件名称、不出现遇难者照片", "讲完后立刻接下一个相对轻松的故事或收尾"],
+      "images": [
+        {"file": "09-shooter-drill/cover.jpg", "purpose": "封面：美国教室 lockdown drill 演练（避免枪支元素）"},
+        {"file": "09-shooter-drill/drill-classroom.jpg", "purpose": "故事铺垫：学生躲桌下"},
+        {"file": "09-shooter-drill/state-laws.png", "purpose": "反差揭示：要求演练的州地图或统计"},
+        {"file": "09-shooter-drill/china-earthquake-drill.jpg", "purpose": "对比锚：中国学生地震演练"}
+      ]
+    }
+  ]
+}
