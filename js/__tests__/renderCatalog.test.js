@@ -7,7 +7,7 @@ const sampleStory = {
   title: '没交75美元，消防车在我家门口看着房子烧',
   theme: '安全 / 公共服务',
   risk_level: 'medium',
-  estimated_duration_min: 4,
+  estimated_duration_min: [3, 5],
   hook: '消防员到场后查到没交费，转身就走',
   us_data: {},
   cn_data: {},
@@ -38,9 +38,15 @@ test('buildCatalogCardHTML: shows theme tag', () => {
   assert.ok(html.includes('安全 / 公共服务'));
 });
 
-test('buildCatalogCardHTML: shows estimated duration', () => {
+test('buildCatalogCardHTML: shows estimated duration range', () => {
   const html = buildCatalogCardHTML(sampleStory, 1);
-  assert.match(html, /4\s*分钟|4\s*min/);
+  assert.match(html, /3-5\s*分钟/);
+});
+
+test('buildCatalogCardHTML: handles single number duration', () => {
+  const single = { ...sampleStory, estimated_duration_min: 4 };
+  const html = buildCatalogCardHTML(single, 1);
+  assert.match(html, /4\s*分钟/);
 });
 
 test('buildCatalogCardHTML: escapes HTML special characters in title', () => {

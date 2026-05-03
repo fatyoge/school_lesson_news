@@ -18,11 +18,17 @@ function escapeHTML(str) {
  * @param {number} index  从 1 开始的序号；用于显示和数字键导航
  * @returns {string}
  */
+function formatDuration(min) {
+  if (Array.isArray(min)) return min.join('-');
+  const n = Number(min);
+  return Number.isFinite(n) ? n : 0;
+}
+
 export function buildCatalogCardHTML(story, index) {
   const id = escapeHTML(story.id);
   const title = escapeHTML(story.title);
   const theme = escapeHTML(story.theme);
-  const minutes = Number(story.estimated_duration_min) || 0;
+  const minutes = formatDuration(story.estimated_duration_min);
   const hook = escapeHTML(story.hook || '');
 
   return `
@@ -49,6 +55,9 @@ export function renderCatalog(stories, container, reveal) {
   container.innerHTML = stories
     .map((story, idx) => buildCatalogCardHTML(story, idx + 1))
     .join('\n');
+
+  if (container.dataset.catalogBound) return;
+  container.dataset.catalogBound = 'true';
 
   container.addEventListener('click', (event) => {
     const card = event.target.closest('.catalog-card');
