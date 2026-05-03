@@ -4,6 +4,7 @@
 import { loadStories } from './storyData.js';
 import { renderCatalog } from './renderCatalog.js';
 import { renderAllStories } from './renderStory.js';
+import { setupKeyboardShortcuts } from './keyboard.js';
 
 async function bootstrap() {
   const stories = await loadStories('./data/stories.json');
@@ -35,6 +36,8 @@ async function bootstrap() {
     const btn = event.target.closest('[data-action="back-to-catalog"]');
     if (btn) reveal.slide(1, 0);
   });
+
+  setupKeyboardShortcuts(stories, reveal);
 
   window.__lessonApp = { stories, reveal };
 }
